@@ -30,7 +30,6 @@ img {
     vertical-align: top;
 }
 
-/*inline-block 은 inline 요소의 width, height 값 조절을 위해, position:absolute 는 노멀 플로우에서 요소의 위치를 지우기 위해*/
 .a11y {
     display: inline-block;
     position: absolute;
@@ -332,7 +331,7 @@ nav > ul {
     height: 400px;
     text-align: center;
     align-items: center;
-
+    z-index: 10;
     background-color: rgb(255,255,255);
     border-radius: 30px; 
     box-shadow:0 0 30px 0 rgba(0, 0, 0, 20%); 
@@ -368,34 +367,4 @@ nav > ul {
     border-radius: 40px;
     color: #fff;
     margin-bottom: 40px;
-}
-
-
-/* 기존 스타일 유지 */
-#photoList {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 72px;
-    list-style: none;
-    padding: 0;
-    margin: 88px 0 100px;
-}
-
-#photoList li {
-    text-align: center;
-}
-
-#photoList li button {
-    width: 100%;
-    padding: 0;
-    border: none;
-    background: none;
-    overflow: hidden;
-    border-radius: 30px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
-}
-
-#photoList li img {
-    width: 100%;
-    height: auto;
 }
