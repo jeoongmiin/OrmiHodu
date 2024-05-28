@@ -9,7 +9,7 @@ btn.addEventListener('click', () => {
 
 async function fetchImages(page) {
     try {
-        const response = await fetch('https://picsum.photos/v2/list?page=${page}&limit=3'); 
+        const response = await fetch(`https://picsum.photos/v2/list?page=2&limit=3`); 
 
         if (!response.ok) {
             throw new Error('네트워크 응답에 문제가 있습니다.');
@@ -26,6 +26,6 @@ async function fetchImages(page) {
 
 function makeImageList(datas) {
     datas.forEach((data) => {
-        listPic.insertAdjacentHTML('beforeend', '<img src="${data.download_url}" alt="img">');
+        listPic.insertAdjacentHTML('beforeend', `<img src="${data.download_url}" alt="img">`);
     });
 }
